@@ -1,6 +1,4 @@
-ARG SOURCE
-ARG VERSION
-FROM $SOURCE:$VERSION
+FROM quay.io/osism/horizon:ussuri-latest
 
 COPY files/img /var/lib/kolla/venv/lib/python2.7/site-packages/openstack_dashboard/static/dashboard/img
 COPY files/src /var/lib/kolla/venv/lib/python2.7/site-packages/scs_customization_module
