@@ -12,7 +12,7 @@ on:
       - '**.yaml'
 
 jobs:
-  default:
+  yamllint:
 
     runs-on: ubuntu-latest
 
