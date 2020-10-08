@@ -1,6 +1,6 @@
 # https://docs.openstack.org/horizon/rocky/configuration/customizing.html#horizon-customization-module-overrides
 #
-# HORIZON_CONFIG["customization_module"] = "betacloud_customization_module.overrides"
+# HORIZON_CONFIG["customization_module"] = "scs_customization_module.overrides"
 
 import horizon
 
