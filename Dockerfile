@@ -1,4 +1,4 @@
-ARG RELEASE=ussuri
+ARG RELEASE=victoria
 FROM quay.io/osism/horizon:${RELEASE}-latest
 
 ARG BRAND=scs
