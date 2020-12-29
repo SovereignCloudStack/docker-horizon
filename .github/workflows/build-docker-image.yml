@@ -1,7 +1,7 @@
 ---
 name: Build docker image
 
-on:
+"on":
   pull_request:
     paths:
       - .github/workflows/build-docker-image.yml
@@ -9,9 +9,7 @@ on:
       - files/**
 
 jobs:
-
   default:
-
     runs-on: ubuntu-latest
 
     strategy:

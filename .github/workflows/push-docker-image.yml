@@ -1,7 +1,7 @@
 ---
 name: Push docker image
 
-on:
+"on":
   push:
     branches:
       - master
@@ -11,9 +11,7 @@ on:
       - files/**
 
 jobs:
-
   default:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -35,4 +33,4 @@ jobs:
         with:
           build-args: BRAND=${{ matrix.brand }}
           push: true
-          tags: quay.io/sovereigncloudstack/horizon:ussuri-${{ matrix.brand }}
+          tags: quay.io/sovereigncloudstack/horizon:victoria-${{ matrix.brand }}
