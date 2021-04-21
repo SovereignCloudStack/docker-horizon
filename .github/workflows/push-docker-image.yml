@@ -1,7 +1,7 @@
 ---
 name: Push docker image
 
-on:
+"on":
   push:
     branches:
       - master
@@ -11,10 +11,14 @@ on:
       - files/**
 
 jobs:
-
   default:
-
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        brand:
+          - plusserver
+          - scs
 
     steps:
       - uses: actions/checkout@v2
@@ -27,5 +31,6 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - uses: docker/build-push-action@v2
         with:
+          build-args: BRAND=${{ matrix.brand }}
           push: true
-          tags: quay.io/sovereigncloudstack/horizon:ussuri-latest
+          tags: quay.io/sovereigncloudstack/horizon:victoria-${{ matrix.brand }}
